@@ -1,14 +1,20 @@
 #!/bin/bash
+set -euo pipefail
 
-echo "How many vms do you want to create?"
+if [ ! "$#" = "1" ]; then
+    echo "Usage: $0 <config file>"
+fi
 
-read value
+source $1
 
-echo "Create $value vms...."
+echo "Create $VM_NUM vms...."
 
-for ((i=0;i<value;i++))
+for ((i=0;i<$VM_NUM;i++))
 do
-    sudo xen-create-image --hostname=vm$vi --memory=1024mb --vcpus=1 --bridge=xenbr0 \
---ip=10.0.0.2 --gateway=10.0.0.1 --netmask=255.255.255.0 --size=1gb --password=a \
---dir=/home/beichen/xen-domains --genpass=0 --install-method=debootstrap --noswap
+echo "pass $i"
+let ip="$i+2"
+    sudo xen-create-image --hostname=vm$i --memory=${MEM_MB}mb --vcpus=$Vcpu --bridge=$bridge \
+--ip=10.0.0.$ip --gateway=10.0.0.1 --netmask=255.255.255.0 --size=$VDSize --password=a \
+--dir=$dir --genpass=0 --install-method=debootstrap --noswap
+
 done
