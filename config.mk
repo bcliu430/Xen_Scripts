@@ -2,7 +2,7 @@
 VM_NUM=2 
 
 # Amount of memory for the VM in MB
-MEM_MV=1024
+MEM_MB=1024
 
 # Size of Virtual disk in GB
 VDSize=1
