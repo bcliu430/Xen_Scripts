@@ -14,7 +14,7 @@ do
 echo "pass $i"
 let ip="$i+2"
     sudo xen-create-image --hostname=vm$i --memory=${MEM_MB}mb --vcpus=$Vcpu --bridge=$bridge \
---ip=10.0.0.$ip --gateway=10.0.0.1 --netmask=255.255.255.0 --size=$VDSize --password=a \
+--ip=10.0.0.$ip --gateway=10.0.0.1 --netmask=255.255.255.0 --size=${VDSize}gb --password=a \
 --dir=$dir --genpass=0 --install-method=debootstrap --noswap
 
 done
