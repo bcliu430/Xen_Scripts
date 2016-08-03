@@ -13,18 +13,19 @@ for ((i=0;i<$VM_NUM;i++))
 do
     echo "pass $i"
     let ip="$i+2"
-        sudo xen-create-image --hostname=vm$i \
-        --memory=${MEM_MB}mb \
-        --vcpus=$Vcpu \
-        --bridge=$bridge \
-        --ip=10.0.0.$ip \
-        --gateway=10.0.0.1 \
-        --netmask=255.255.255.0 \
-        --size=${VDSize}gb \
-        --password=a \
-        --dir=$dir \
-        --genpass=0 \
-        --install-method=debootstrap \
-        --noswap
+        sudo xen-create-image \
+        --hostname=vm$i \  #setup hostname
+        --memory=${MEM_MB}mb \  # amount of memory
+        --vcpus=$Vcpu \  # number of vcpu
+        --bridge=$bridge \  # internet bridge
+        --ip=10.0.0.$ip \  # assign ip address
+        --gateway=10.0.0.1 \  # assign gateway
+        --netmask=255.255.255.0 \  #assign netmask
+        --size=${VDSize}gb \  #harddisk size
+        --password=a \  #set default passwd
+        --dir=$dir \  #installation directory
+        --genpass=0 \ 
+        --install-method=debootstrap \  # install method
+        --noswap  #swap size
 
 done
