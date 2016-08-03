@@ -1,3 +1,9 @@
+# Directory for vm
+dir=~/xen-domains
+
+
+###This part is used to deploy vms
+
 # Number of VM to deploy
 VM_NUM=2 
 
@@ -13,5 +19,16 @@ Vcpu=1
 # Network bridge
 bridge=xenbr0
 
-# Deploy Directory
-dir=/home/beichen/xen-domains
+###
+
+
+
+###This part is used to delete vm
+
+#set start vm
+start=1
+
+#set stop vm
+stop=5
+
+###
