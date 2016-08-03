@@ -13,7 +13,7 @@ for ((i=${start};i<${stop}+1;i++))
 do
    echo "pass $i"
    #stop vm
-   sudo xl destory vm$i
+   sudo xl destroy vm$i
    #delete image file from directory given in config
    sudo xen-delete-image vm$i --dir=$dir
 done
