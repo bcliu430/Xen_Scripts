@@ -1,0 +1,16 @@
+xl list| grep vm
+
+#compare vms that need to be deleted with existing vms
+#ignore those vms that do not exists, delete exist ones and keep the rest
+
+for ((i=$start;i<$stop+1;++));
+do
+    for $0 in $0; 
+    do
+        if $0 ="vm“$start; then
+           print("delete" $0 )
+        else
+            print($0 "does not exist")
+        fi
+    done
+done
