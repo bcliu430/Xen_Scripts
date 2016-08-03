@@ -8,7 +8,7 @@
 set -euo pipefail
 
 if [ ! "$#" = "1" ]; then
-    echo "Usage:$0 <config file>"
+    echo "Usage: $0 <config file>"
 fi
 
 source $1
