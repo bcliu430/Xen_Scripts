@@ -1,3 +1,9 @@
+###
+#This script is used to delete spefific vm (for example from 1 to 3 ) in specific directory
+#TO DO
+#    check if the vm exists before executing.
+
+###
 #! /bin/bash
 set -euo pipefail
 
