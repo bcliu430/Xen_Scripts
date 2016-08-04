@@ -3,7 +3,7 @@ set -euo pipefail
 
 #dir="/root/xen-domains"
 if [ ! "$#" == "2" ] ; then
-    echo "Usage: $0 <prefix> <start> [stop]"
+    echo "Usage: $0 <prefix> <start> <stop>"
     echo "ex: $0 vm 0 5 "
     echo "Will delete vm0 to vm5"
     exit
