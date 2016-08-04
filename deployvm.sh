@@ -1,8 +1,9 @@
 #!/bin/bash
-set -euxo pipefail
+set -euo pipefail
 
 if [ ! "$#" = "1" ]; then
     echo "Usage: $0 <config file>"
+    exit
 fi
 
 source $1
