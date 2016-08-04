@@ -9,7 +9,7 @@ source $1
 
 echo "Create $VM_NUM vms...."
 
-for ((i=20;i<$VM_NUM+20;i++))
+for ((i=12;i<$VM_NUM+12;i++))
 do
     echo "pass $i"
     let ip="$i+2"

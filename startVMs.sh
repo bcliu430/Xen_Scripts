@@ -2,7 +2,7 @@
 set -euxo pipefail
 
 #dir="/root/xen-domains"
-if [ ! "$#" == "3" ] || ; then
+if [ ! "$#" == "3" ]; then
     echo "Usage: $0 <prefix> <start> <stop>"
     echo "ex: $0 vm 0 5 "
     echo "Will start vm0 to vm5"

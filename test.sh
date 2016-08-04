@@ -9,7 +9,7 @@ source $1
 
 echo "Create $VM_NUM vms...."
 
-for ((i=15;i<$VM_NUM+15;i++))
+for ((i=16;i<$VM_NUM+16;i++))
 do
     echo "pass $i"
     let ip="$i+2"
@@ -25,8 +25,7 @@ do
             --password=a \
             --dir=$dir \
             --genpass=0 \
-            --install-method=copy \
-            --install-source=/root/xen-domains/domains/vm0/disk.img
+            --install-method=debootstrap \
 	    --noswap
 
 done
