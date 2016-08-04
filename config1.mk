@@ -15,8 +15,15 @@ size=1
 # Number of Vcpu
 Vcpu=1
 
+## network setup
 # Network bridge
 bridge=xenbr0
+#gateway
+gateway=10.0.0.1
+#netmask
+netmask=255.255.255.0
+##
+
 
 ###
 
