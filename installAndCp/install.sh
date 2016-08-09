@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euxo pipefail
+set -euo pipefail
 
 SCRIPT_RUN_SINGLE="/root/Xen_scripts/vm_run_cmd.sh"
 
@@ -13,10 +13,11 @@ fi
 
 for i in `seq $2 $3`; do
     while IFS='' read -r line  ; do
-        [ $SCRIPT_RUN_SINGLE $1$i $line ] &
+        [[ $line = \#* ]] && continue
+        [ "$SCRIPT_RUN_SINGLE $1$i $line" ] &
+
     done < $4
 done
-
 #TODO
 #deal with comments if exists 
 #delete empty lines in config file
