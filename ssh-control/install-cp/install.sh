@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -euxo pipefail
 
 SCRIPT_RUN_SINGLE="/root/Xen_scripts/vm_run_cmd.sh"
@@ -18,5 +17,6 @@ for i in `seq $2 $3`; do
 done
 
 #TODO
-#deal with comments if exists 
-#delete empty lines in config file
+# - deal with comments if exists (check if line stats with #, if true just
+#   skip it)
+# - deal with empty line: if line == "" just skip it too

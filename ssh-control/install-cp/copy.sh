@@ -12,6 +12,7 @@ while IFS='' read -r line; do
     source=`echo $line | sed -n "s/\(.*\)\;\(.*\)/\1/p"`
     target=`echo $line | sed -n "s/\(.*\)\;\(.*\)/\2/p"`
 
+	# TODO do the actual copy here !
     echo "$source --> $target"
 
 done < $4
