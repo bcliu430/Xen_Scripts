@@ -1,7 +1,8 @@
 #!/bin/bash
+
 set -euo pipefail
 
-SCRIPT_RUN_SINGLE="/root/Xen_scripts/vm_run_cmd.sh"
+SCRIPT_RUN_SINGLE="/root/docker/Docker/Doc_cmd.sh"
 
 if [ "$#" -lt 4 ]; then
 	echo "usage: $0 <prefix> <start> <stop> <cmd>"

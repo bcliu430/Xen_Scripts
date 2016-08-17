@@ -1,6 +1,10 @@
 #!/bin/bash
+<<<<<<< HEAD:installAndCp/install.sh
 
 set -euo pipefail
+=======
+set -euxo pipefail
+>>>>>>> 296ef2a508c5bdefc18ba1a96fa37987e777c3fa:ssh-control/install-cp/install.sh
 
 SCRIPT_RUN_SINGLE="/root/Xen_scripts/vm_run_cmd.sh"
 
@@ -19,5 +23,6 @@ for i in `seq $2 $3`; do
     done < $4
 done
 #TODO
-#deal with comments if exists 
-#delete empty lines in config file
+# - deal with comments if exists (check if line stats with #, if true just
+#   skip it)
+# - deal with empty line: if line == "" just skip it too
