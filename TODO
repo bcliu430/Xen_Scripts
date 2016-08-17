@@ -2,3 +2,5 @@
 - install-cp/copy.sh: same thing
 - README.md: write some doc about all the scripts and the configuration
   files if needed.
+- docker: see how we can limit CPUs / memory (might be at the docker 
+  run moment and not in docker create)
