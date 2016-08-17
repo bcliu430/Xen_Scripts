@@ -10,7 +10,7 @@ if [ ! "$#" == "3" ]; then
 fi
 
 for i in `seq $2 $3`; do
-   echo "Shuting $i"
+   echo "Shutting down $i"
    # shut vm
    sudo xl destroy ${1}${i}||true
 done
