@@ -1,2 +1,4 @@
 - install-cp/install.sh: check the TODOS in comments
 - install-cp/copy.sh: same thing
+- README.md: write some doc about all the scripts and the configuration
+  files if needed.
