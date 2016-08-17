@@ -18,16 +18,15 @@ for i in `seq $first_vm_id $last_vm_id`; do
         sudo xen-create-image \
             --hostname=$PREFIX$i \
             --memory=${MEMORY}mb \
-            --hostname=$PREFIX$i \
+            --vcpus=${VCPUS} \
             --bridge=$BRIDGE \
             --ip=$first_ip_part.$second_ip_part \
-	    --gateway=$GATEWAY \
+            --gateway=$GATEWAY \
             --netmask=$NETMASK \
             --size=${DISK_SIZE}gb \
             --password=a \
             --dir=$XT_DIR \
             --genpass=0 \
             --install-method=debootstrap \
-	    --noswap
-
+            --noswap
 done
