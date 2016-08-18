@@ -13,9 +13,9 @@ fi
 
 for i in `seq $2 $3`; do
     while IFS='' read -r line  ; do
-        [[ $line = \#* ]] && continue
-        [ "$SCRIPT_RUN_SINGLE $1$i $line" ] &
-
+        if [ "$line" != "" ] || [[ "$line" != "\#*" ]]; then
+            [ "$SCRIPT_RUN_SINGLE $1$i $line" ] &
+        fi
     done < $4
 done
 #TODO
