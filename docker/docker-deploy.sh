@@ -12,6 +12,10 @@ fi
         echo " pass $i"
         docker create -it --name $1$i ubuntu /bin/bash || true
 
+#      -c
+#      --cpuset-cpus string          CPUs in which to allow execution (0-3, 0,1)
+#      --cpuset-mems string          MEMs in which to allow execution (0-3, 0,1)
+
 done
 
 docker ps -a
