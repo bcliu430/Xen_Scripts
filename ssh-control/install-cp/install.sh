@@ -1,10 +1,6 @@
 #!/bin/bash
-<<<<<<< HEAD:installAndCp/install.sh
 
 set -euo pipefail
-=======
-set -euxo pipefail
->>>>>>> 296ef2a508c5bdefc18ba1a96fa37987e777c3fa:ssh-control/install-cp/install.sh
 
 SCRIPT_RUN_SINGLE="/root/Xen_scripts/vm_run_cmd.sh"
 
