@@ -12,37 +12,37 @@ In the configuration files, it contains the following parameters:
 
 PREFIX=vm 
 
-# VM name prefix
+VM name prefix
 
 ID=0                        
 
-# Start VM number
+Start VM number
 
 XT_DIR=/root/xen-domains    
 
-# Deploy directory
+Deploy directory
 
 VM_NUM=1                    
 
-# Number of VMs that want to deploy
+Number of VMs that want to deploy
 
 MEMORY=1024                 
 
-# Memory size in MB
+Memory size in MB
 
 DISK_SIZE=1                 
 
-# Hard disk size in GB
+Hard disk size in GB
 
 VCPUS=1                    
 
-# Numeber of VCPU
+Numeber of VCPU
 
-# Networking - the ip will be computed based on GATEWAY (first 3 numbers), and
+Networking - the ip will be computed based on GATEWAY (first 3 numbers), and
 
-# BASE_IP_NUM. Fors example if we are creating 3 VMs, GATEWAY=10.0.0.1, and
+BASE_IP_NUM. Fors example if we are creating 3 VMs, GATEWAY=10.0.0.1, and
 
-# BASE_IP_NUM=2, their ip will be 10.0.0.2, 10.0.0.3 and 10.0.0.4
+BASE_IP_NUM=2, their ip will be 10.0.0.2, 10.0.0.3 and 10.0.0.4
 
 BRIDGE=xenbr0
 
