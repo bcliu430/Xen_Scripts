@@ -55,7 +55,7 @@ GATEWAY=10.0.0.1
 #####Start/Stop/Delete PV:
 In order to start/stop/delete some PV, we need to use correspond script.
     
-Usage: $0 <prefix> <start> <stop>. 
+	Usage: $0 <prefix> <start> <stop>. 
 
 $0 is the script for specific pv operation. Example: 
 
@@ -80,8 +80,6 @@ This will show the date on vm0 and vm1.
 install.sh and install are used to install software on several PVs. 
 copy.sh and copy are used to copy files from and to the PVs.
 
-Docker:
-=======
 
 #####Under ssh control, there are two scripts used to run commands in virtual machine via ssh.
 run_cmd.sh example:
@@ -123,11 +121,14 @@ to work on several dockers or ./shell.sh all
     
 Right now, we are using nsenter to control the dockers. Usage is the same as Xen PV.
 docker_run_cmd.sh ex: 
+
     ./docker_run_cmd.sh doc 0 pwd. 
 
 This will show the current working directory.
 
 docker_run_cmds.sh ex: 
+
     ./docker_run_cmds doc 0 1 pwd. 
+
 This will show the current working directory in doc0 and doc1.
 
