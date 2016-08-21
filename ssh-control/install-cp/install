@@ -1,3 +1,2 @@
-apt-get update
-apt-get -y upgrade
-apt-get install vim postmark
+vim
+postmark

@@ -22,3 +22,5 @@ else
 fi
 
 docker ps -a
+
+# TODO fix the argument checking
