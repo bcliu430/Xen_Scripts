@@ -37,26 +37,32 @@ In order to start/stop/delete some PV, we need to use correspond script.
     Example: ./pv-start.sh vm 0 2. This will start vm0 to vm2. 
 
 #####Under ssh control, there are two scripts used to run commands in virtual machine via ssh.
-    run_cmd.sh ex: ./run_cmd.sh vm0 pwd.
-    This will show the current working directory.
-    run_cmds.sh ex: ./run_cmds vm 0 1 pwd. 
-    This will show the current working directory in vm0 and vm1.
+run_cmd.sh ex: 
+    ./run_cmd.sh vm0 pwd.
+This will show the current working directory.
+run_cmds.sh ex: 
+    ./run_cmds vm 0 1 pwd. 
+This will show the current working directory in vm0 and vm1.
 
 #####install and copy are used to install or copy files to virtual machine.
-    Usage: <shell script> <prefix> <start> <stop> <config file>
-    Example: ./install.sh vm 0 1 install
-    If you need to implement the config file, just put software name in the install file in a new line, 
-    or put /path/from/source;path/to/target in the copy file.
+Usage: <shell script> <prefix> <start> <stop> <config file>
+Example: 
+    ./install.sh vm 0 1 install
+If you need to implement the config file, just put software name in the install file in a new line, 
+or put /path/from/source;path/to/target in the copy file.
     
 ##Docker:
-    To deploy docker,Usage: $0 <prefix> <start> <stop>. 
-    Example: ./docker-deploy.sh doc 0 1".
-    This will deploy two dockers named doc0 and doc1.
+To deploy docker,Usage: $0 <prefix> <start> <stop>. 
+Example: 
+    ./docker-deploy.sh doc 0 1".
+This will deploy two dockers named doc0 and doc1.
 
 To start, stop, or delete, use ./shell.sh <prefix> <start> <stop> (ex: ./docker-start(stop/delete).sh doc 0 1) to work on several dockers or ./shell.sh all (ex: ./docker-start(stop/delete).sh all) to work with all dockers.
     
-    Right now, we are using nsenter to control the dockers. Usage is the same as Xen PV.
-    docker_run_cmd.sh ex: ./docker_run_cmd.sh doc 0 pwd. 
-    This will show the current working directory.
-    docker_run_cmds.sh ex: ./docker_run_cmds doc 0 1 pwd. 
-    This will show the current working directory in doc0 and doc1.
+Right now, we are using nsenter to control the dockers. Usage is the same as Xen PV.
+docker_run_cmd.sh ex: 
+    ./docker_run_cmd.sh doc 0 pwd. 
+This will show the current working directory.
+docker_run_cmds.sh ex: 
+    ./docker_run_cmds doc 0 1 pwd. 
+This will show the current working directory in doc0 and doc1.
