@@ -5,7 +5,7 @@ This section is used to deploy, start, stop, delete Xen VM or docker, and instal
 
 ##Xen PV:
 
-###Deploy PV: 
+#####Deploy PV: 
 To deploy an amount of pv, we need to use pv-deploy.sh and pv-deploy-config.mk to achieve. 
     Usage: ./pv-deploy.sh <config file>
 In the configuration files, it contains the following parameters:
@@ -49,7 +49,9 @@ In order to start/stop/delete some PV, we need to use correspond script.
     or put /path/from/source;path/to/target in the copy file.
     
 ##Docker:
-    To deploy docker,Usage: $0 <prefix> <start> <stop>. Example: ./docker-deploy.sh doc 0 1" will deploy two dockers named doc0 and doc1.
+    To deploy docker,Usage: $0 <prefix> <start> <stop>. 
+    Example: ./docker-deploy.sh doc 0 1".
+    This will deploy two dockers named doc0 and doc1.
 
 To start, stop, or delete, use ./shell.sh <prefix> <start> <stop> (ex: ./docker-start(stop/delete).sh doc 0 1) to work on several dockers or ./shell.sh all (ex: ./docker-start(stop/delete).sh all) to work with all dockers.
     
