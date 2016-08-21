@@ -10,9 +10,7 @@ To deploy an amount of pv, we need to use pv-deploy.sh and pv-deploy-config.mk t
     Usage: ./pv-deploy.sh <config file>
 In the configuration files, it contains the following parameters:
 
-PREFIX=vm 
-
-VM name prefix
+PREFIX=vm    //VM name prefix
 
 ID=0                        
 
@@ -55,7 +53,7 @@ GATEWAY=10.0.0.1
 #####Start/Stop/Delete PV:
 In order to start/stop/delete some PV, we need to use correspond script.
     
-Usage: $0 <prefix> <start> <stop>. 
+    Usage: $0 <prefix> <start> <stop>. 
 
 $0 is the script for specific pv operation. Example: 
 
@@ -123,11 +121,14 @@ to work on several dockers or ./shell.sh all
     
 Right now, we are using nsenter to control the dockers. Usage is the same as Xen PV.
 docker_run_cmd.sh ex: 
+
     ./docker_run_cmd.sh doc 0 pwd. 
 
 This will show the current working directory.
 
 docker_run_cmds.sh ex: 
+
     ./docker_run_cmds doc 0 1 pwd. 
+    
 This will show the current working directory in doc0 and doc1.
 
