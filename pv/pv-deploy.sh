@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euxo pipefail
+set -euo pipefail
 
 if [ ! "$#" = "1" ]; then
     echo "Usage: $0 <config file>"
@@ -30,3 +30,8 @@ for i in `seq $first_vm_id $last_vm_id`; do
             --install-method=debootstrap \
             --noswap
 done
+
+# TODO here check if we have enough loop device to launch everything, check hereif its built in:
+# - http://askubuntu.com/questions/666880/loop-module-not-present-on-ubuntu-installation
+# Or here if it's a module:
+# https://yeri.be/xen-failed-to-find-an-unused-loop-device

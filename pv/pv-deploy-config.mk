@@ -11,16 +11,16 @@ XT_DIR=/root/xen-domains
 ###This part is used to deploy vms
 
 # Number of VM to deploy
-VM_NUM=1 
+VM_NUM=16 
 
 # Amount of memory for the VM in MB
-MEMORY=1024
+MEMORY=4096
 
 # Size of Virtual disk in GB
 DISK_SIZE=1
 
 # Number of Vcpu
-VCPUS=1
+VCPUS=4
 
 # Networking - the ip will be computed based on GATEWAY (first 3 numbers), and
 # BASE_IP_NUM. Fors example if we are creating 3 VMs, GATEWAY=10.0.0.1, and
