@@ -4,7 +4,7 @@ set -euo pipefail
 
 if [ "$#" -lt 3 ];then
     echo "Usage: $0 <prefix> <start> <stop>"
-    echo "ex: ./installDocker.sh docker 0 1"
+    echo "ex: ./docker-deploy.sh docker 0 1"
     exit
 fi
 

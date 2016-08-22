@@ -1,4 +1,4 @@
-apt-get update
-apt-get -f -y install
-apt-get -y upgrade
-apt-get install -y vim postmark libgfortran3 libgomp1
+vim
+postmark
+libgfortran3
+libgomp1
