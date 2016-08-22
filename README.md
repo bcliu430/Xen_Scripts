@@ -7,7 +7,9 @@ This section is used to deploy, start, stop, delete Xen VM or docker, and instal
 
 #####Deploy PV: 
 To deploy an amount of pv, we need to use pv-deploy.sh and pv-deploy-config.mk to achieve. 
+   
     Usage: ./pv-deploy.sh <config file>
+
 In the configuration files, it contains the following parameters:
 
     
