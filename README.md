@@ -35,11 +35,7 @@ BASE_IP_NUM=2, their ip will be 10.0.0.2, 10.0.0.3 and 10.0.0.4
 #####Start/Stop/Delete PV:
 In order to start/stop/delete some PV, we need to use correspond script.
     
-<<<<<<< HEAD
-	Usage: $0 <prefix> <start> <stop>. 
-=======
     Usage: $0 <prefix> <start> <stop>. 
->>>>>>> db07265e2eda85d6b72f2d816288cc360c8f0f1d
 
 $0 is the script for specific pv operation. Example: 
 
@@ -47,28 +43,9 @@ $0 is the script for specific pv operation. Example:
 
 This will start vm0 to vm2. 
 
-<<<<<<< HEAD
 
-Under ssh control, there are scripts that can run commands in different virtual machines.
-run_cmd.sh can run a single command on a single machine. Usage: 
+Under ssh control, there are two scripts used to run commands in virtual machine via ssh.
 
-    ./run_cmd.sh vm0 date. 
-
-This will automatically show the date on vm0.
-
-run_cmds.sh can run a single command on multiple machine. Usage: 
-
-    ./run_cmds.sh vm 0 1 date. 
-
-This will show the date on vm0 and vm1.
-
-install.sh and install are used to install software on several PVs. 
-copy.sh and copy are used to copy files from and to the PVs.
-
-
-=======
->>>>>>> db07265e2eda85d6b72f2d816288cc360c8f0f1d
-#####Under ssh control, there are two scripts used to run commands in virtual machine via ssh.
 run_cmd.sh example:
  
     ./run_cmd.sh vm0 pwd.
@@ -81,7 +58,7 @@ run_cmds.sh example:
 
 This will show the current working directory in vm0 and vm1.
 
-#####install and copy are used to install or copy files to virtual machine.
+install and copy are used to install or copy files to virtual machine.
 
     Usage: <shell script> <prefix> <start> <stop> <config file>
 
@@ -121,10 +98,7 @@ This will show the current working directory.
 docker_run_cmds.sh ex: 
 
     ./docker_run_cmds doc 0 1 pwd. 
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> db07265e2eda85d6b72f2d816288cc360c8f0f1d
+
 This will show the current working directory in doc0 and doc1.
 
