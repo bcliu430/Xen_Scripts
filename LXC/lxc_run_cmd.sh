@@ -5,6 +5,7 @@ if [ "$1" == "" ] || [ "$2" == "" ]; then
 	exit
 fi
 
-lxc-ls -f |grep $1 |( awk -F ' ' '{print$3}' )
+ssh ubuntu@$( lxc-ls -f |grep $1 |( awk -F ' ' '{print$3}' )) ${*:2} 2>&1 | sed "s/^/[$1] /"
+
 
 #ssh root@$1 ${*:2} 2>&1 | sed "s/^/[$1] /"
