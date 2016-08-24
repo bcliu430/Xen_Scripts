@@ -43,7 +43,9 @@ $0 is the script for specific pv operation. Example:
 
 This will start vm0 to vm2. 
 
-#####Under ssh control, there are two scripts used to run commands in virtual machine via ssh.
+
+Under ssh control, there are two scripts used to run commands in virtual machine via ssh.
+
 run_cmd.sh example:
  
     ./run_cmd.sh vm0 pwd.
@@ -56,7 +58,7 @@ run_cmds.sh example:
 
 This will show the current working directory in vm0 and vm1.
 
-#####install and copy are used to install or copy files to virtual machine.
+install and copy are used to install or copy files to virtual machine.
 
     Usage: <shell script> <prefix> <start> <stop> <config file>
 
@@ -96,6 +98,7 @@ This will show the current working directory.
 docker_run_cmds.sh ex: 
 
     ./docker_run_cmds doc 0 1 pwd. 
-    
+
+
 This will show the current working directory in doc0 and doc1.
 
