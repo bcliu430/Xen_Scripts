@@ -1,6 +1,3 @@
-- README.md: write some doc about all the scripts and the configuration
-  files if needed.
-- docker: see how we can limit CPUs / memory (might be at the docker 
-  run moment and not in docker create)
-- try to ssh into docker
-- write script for lxc
+- lxc ssh control. 
+  I cannot find the default password for root user in lxc. root/root does not work in this case.
+- try more examples on NPB OMP
