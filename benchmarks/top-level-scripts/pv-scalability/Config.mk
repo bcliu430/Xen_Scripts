@@ -1,7 +1,7 @@
 # Number of invocations of NPB benchs
 NUM=21
 
-# Number of OMP threads for each invocation
+# Number of OMP threads for each invocation - For now working only on native
 MAX_THREADS=4
 
 # Named of the OMP benchs to launch

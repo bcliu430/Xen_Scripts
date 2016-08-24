@@ -13,5 +13,5 @@ fi
 for i in `seq $2 $3`; do
    echo "Starting $i"
    # start vm
-   sudo xl create /etc/xen/${1}${i}.cfg ||true
+   sudo xl create /etc/xen/${1}${i}.cfg
 done
