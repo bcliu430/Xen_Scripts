@@ -13,7 +13,7 @@ while IFS='' read -r line; do
     target=`echo $line | sed -n "s/\(.*\)\;\(.*\)/\2/p"`
    
     for i in `seq $2 $3`; do
-       scp $source "root@$1$i:"$target
-#        echo "$source --> "root@$1$i:"$target" 
+       ( scp $source "root@$1$i:"$target ) &
     done
 done < $4
+wait

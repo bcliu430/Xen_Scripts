@@ -3,7 +3,7 @@
 # ex: PREFIX=vm, ID=0 so the name of the first machine created  will be vm0
 # The last vm id will be computed as ID + VM_NUM -1
 PREFIX=vm
-ID=0
+ID=19
 
 # Directory for vm
 XT_DIR=/root/xen-domains
@@ -11,7 +11,7 @@ XT_DIR=/root/xen-domains
 ###This part is used to deploy vms
 
 # Number of VM to deploy
-VM_NUM=16 
+VM_NUM=2 
 
 # Amount of memory for the VM in MB
 MEMORY=4096
@@ -28,7 +28,7 @@ VCPUS=4
 BRIDGE=xenbr0
 NETMASK=255.255.255.0
 GATEWAY=10.0.0.1
-BASE_IP_NUM=2
+BASE_IP_NUM=18
 ###
 
 

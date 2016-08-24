@@ -17,6 +17,7 @@ if [ ! -e $SCRIPT_RUN_CMDS ] ; then
 fi
 
 $SCRIPT_RUN_CMDS $1 $2 $3 apt-get update
+$SCRIPT_RUN_CMDS $1 $2 $3 apt-get -f install -y
 # $SCRIPT_RUN_CMDS $1 $2 $3 apt-get upgrade -y
 
 while IFS='' read -r line  ; do
