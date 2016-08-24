@@ -15,7 +15,7 @@ PROGS_LOC="../../NPB3.3.1/NPB3.3-OMP/bin/"
 PREFIX=vm
 
 # Script to run cmds in multiple VMs (vm only)
-RUN_CMDS="../../ssh-control/run_cmds.sh"
+RUN_CMDS="../../../ssh-control/run_cmds.sh"
 
 # Chrono is a simple tool to measure a command execution time
 CHRONO="../../tools/chrono/chronoquiet"
