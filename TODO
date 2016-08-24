@@ -1,3 +1,4 @@
 - lxc ssh control. 
   I cannot find the default password for root user in lxc. root/root does not work in this case.
 - try more examples on NPB OMP
+- Write doc for LXC

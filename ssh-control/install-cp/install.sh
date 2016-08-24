@@ -1,10 +1,9 @@
 #!/bin/bash
 
-set -euo pipefail
+# set -euxo pipefail
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SCRIPT_RUN_CMDS=$SCRIPT_DIR/../run_cmds.sh
-
 
 if [ "$#" -lt 4 ];then
     echo "Usage: $0 <prefix> <start> <stop> <config file>"
@@ -18,6 +17,7 @@ if [ ! -e $SCRIPT_RUN_CMDS ] ; then
 fi
 
 $SCRIPT_RUN_CMDS $1 $2 $3 apt-get update
+$SCRIPT_RUN_CMDS $1 $2 $3 apt-get -f install -y
 # $SCRIPT_RUN_CMDS $1 $2 $3 apt-get upgrade -y
 
 while IFS='' read -r line  ; do
@@ -25,6 +25,7 @@ while IFS='' read -r line  ; do
             $SCRIPT_RUN_CMDS $1 $2 $3 apt-get install -y $line 
        fi
 done < $4
+
 #TODO
 # - deal with comments if exists (check if line stats with #, if true just
 #   skip it)

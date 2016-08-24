@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euxo pipefail
+set -euo pipefail
 
 #dir="/root/xen-domains"
 if [ ! "$#" == "3" ]; then
