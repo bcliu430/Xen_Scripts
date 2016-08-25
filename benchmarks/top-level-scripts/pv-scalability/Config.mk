@@ -1,7 +1,7 @@
 # Number of invocations of NPB benchs
 NUM=21
 
-# Number of OMP threads for each invocation
+# Number of OMP threads for each invocation - For now working only on native
 MAX_THREADS=4
 
 # Named of the OMP benchs to launch
@@ -15,7 +15,7 @@ PROGS_LOC="../../NPB3.3.1/NPB3.3-OMP/bin/"
 PREFIX=vm
 
 # Script to run cmds in multiple VMs (vm only)
-RUN_CMDS="../../ssh-control/run_cmds.sh"
+RUN_CMDS="../../../ssh-control/run_cmds.sh"
 
 # Chrono is a simple tool to measure a command execution time
 CHRONO="../../tools/chrono/chronoquiet"
