@@ -1,6 +1,34 @@
 set size 1024 10240
 set number 1000
-set transactions 200000
-show
+set transactions 20000
+run 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run
 quit
