@@ -1,0 +1,10 @@
+Script started on Sun 25 Sep 2016 11:52:30 AM EDT
+Error: Cannot direct output to file ''
+	10006 read (10006 per second)
+	67.46 megabytes read (67.46 megabytes per second)
+	10006 read (10006 per second)
+	67.46 megabytes read (67.46 megabytes per second)
+	10006 read (5003 per second)
+	67.46 megabytes read (33.73 megabytes per second)
+	10006 read (10006 per second)
+	67.46 megabytes read (67.46 megabytes per second)
