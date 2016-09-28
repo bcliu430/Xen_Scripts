@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-touch result_read_$(hostname).dat
+echo -n "" > result_read_$(hostname).dat
 
-for i in $(seq 1 20); do 
-    postmark config| grep "megabytes read" >> result_read_$(hostname).dat
+for i in $(seq 1 5); do 
+    postmark config| grep "megabytes read" | sed 's\(\\g' |awk -F' '  ' {print $4}'  >> result_read_$(hostname).dat
 done
 
