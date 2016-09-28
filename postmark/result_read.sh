@@ -1,8 +1,10 @@
 #!/bin/bash
 
-set -euxo pipefail
-#This script is used to run the script and gather result using postmark benchmark
-#Usage ./result_capture.sh <config>
+set -euo pipefail
 
-postmark config|grep "megabytes read" 
-# script -c 'postmark config|grep write' -q result_write 
+touch result_read_$(hostname).dat
+
+for i in $(seq 1 20); do 
+    postmark config| grep "megabytes read" >> result_read_$(hostname).dat
+done
+
