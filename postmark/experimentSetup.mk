@@ -14,5 +14,5 @@ TIMES=5
 RESULT_READ="./result_read.sh "
 
 #script to run cmds in multiple vms
-
+RUN_CMDS="../ssh-control/run_cmds.sh"
 
