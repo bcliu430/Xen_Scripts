@@ -2,5 +2,5 @@
 set -euo pipefail
 
 
-    postmark config
+    postmark postmarkpara
     cat pm-output | grep "megabytes read" | sed 's\(\\g' | awk -F' '  ' {print $4}'  >> result_read_$(hostname).dat
