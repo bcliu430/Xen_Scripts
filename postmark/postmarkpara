@@ -1,5 +1,6 @@
-set size 1024 10240
-set number 10000
-set transactions 20000
+set size 10240 10240
+set number 20000
+set transactions 50000
 run pm-output
 quit
+

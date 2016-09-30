@@ -10,14 +10,18 @@ source $1
 
 echo -n "" > result_read_$(hostname).dat
 
+ $RUN_CMDS $PREFIX $START $STOP rm pm-output
+
 for i in $(seq 1 $TIMES); do
-    $RUN_CMDS $PREFIX $START $STOP /root/Xen_Scripts/postmark/result_read.sh
-    wait
+    $RUN_CMDS $PREFIX $START $STOP ./result_read.sh
 done
 
-# 1. run the experiment once wait
-# 2. create result
-# 3. mkdir in host
-# 4. scp result to host
-#
 
+
+for i in $(seq $START $STOP); do
+    scp root@$PREFIX$i:result_read_$PREFIX$i.dat .
+done
+
+wait
+
+./compute_test.sh $STOP > result.csv

@@ -5,7 +5,7 @@ PREFIX=vm
 START=0
 
 #Stop vm
-STOP=2
+STOP=3
 
 #how many times to tun
 TIMES=5
