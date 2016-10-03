@@ -9,7 +9,9 @@ fi
 source $1
 
 
- $RUN_CMDS $PREFIX $START $STOP rm pm-output ||true
+$RUN_CMDS $PREFIX $START $STOP rm pm-output ||true
+
+rm -r ./result/
 
 for i in $(seq 1 $TIMES); do
     $RUN_CMDS $PREFIX $START $STOP ./result_read.sh
@@ -27,4 +29,4 @@ wait
 
 mkdir -p result
 
-mv ./*.dat ./result/. 
+mv ./*.dat ./result.csv ./result/. 

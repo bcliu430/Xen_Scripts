@@ -29,7 +29,9 @@ for i in `seq 1 $TIMES`; do
 	for j in `seq 0 $STOP`; do 
 		sed -n "${i}{p;q;}" $BENCHMARK_RES$j$POSTFIX >> $TEMP$i$POSTFIX
 	done
-		cat $TEMP$i$POSTFIX | awk -v numofdatafiles=$i '{sum += $1; sumsq += ($1 * $1) } END {sqd = sumsq / NR - (sum / NR)^2; if(sqd < 10^-8) sqd = 0; print numofdatafiles  ", "sum / NR ", " sqrt(sqd)}' 
+#		cat $TEMP$i$POSTFIX | awk -v numofdatafiles=$i '{sum += $1; sumsq += ($1 * $1) } END {sqd = sumsq / NR - (sum / NR)^2; if(sqd < 10^-8) sqd = 0; print numofdatafiles  ", "sum / NR ", " sqrt(sqd)}' 
++		cat $TEMP$i$POSTFIX | awk -v numofdatafiles=$i '{sum += $1; sumsq += ($1 * $1) } END {print numofdatafiles  ", "sum / NR ", " sqrt( sumsq/NR - ( sum / NR) **2)}' 
+
 done
 
 
