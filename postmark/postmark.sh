@@ -11,7 +11,7 @@ source $1
 
 $RUN_CMDS $PREFIX $START $STOP rm pm-output ||true
 
-rm -r ./result/
+rm -r ./result/ || true
 
 for i in $(seq 1 $TIMES); do
     $RUN_CMDS $PREFIX $START $STOP ./result_read.sh
