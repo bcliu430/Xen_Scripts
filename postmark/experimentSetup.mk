@@ -8,7 +8,7 @@ START=0
 STOP=3
 
 #how many times to tun
-TIMES=5
+TIMES=10
 
 #script to collect result
 RESULT_READ="./result_read.sh "
