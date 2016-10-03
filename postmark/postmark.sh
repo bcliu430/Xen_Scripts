@@ -8,9 +8,8 @@ fi
 
 source $1
 
-echo -n "" > result_read_$(hostname).dat
 
- $RUN_CMDS $PREFIX $START $STOP rm pm-output
+ $RUN_CMDS $PREFIX $START $STOP rm pm-output ||true
 
 for i in $(seq 1 $TIMES); do
     $RUN_CMDS $PREFIX $START $STOP ./result_read.sh
@@ -24,4 +23,8 @@ done
 
 wait
 
-./compute_test.sh $STOP > result.csv
+./compute_mean_stddev.sh $STOP > result.csv
+
+mkdir -p result
+
+mv ./*.dat ./result/. 
