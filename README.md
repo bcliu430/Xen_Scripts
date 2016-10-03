@@ -23,9 +23,9 @@ In the configuration files, it contains the following parameters:
 
 Networking - the ip will be computed based on GATEWAY (first 3 numbers), and
 
-BASE_IP_NUM. Fors example if we are creating 3 VMs, GATEWAY=10.0.0.1, and
+BASE_IP_NUM. For example if we are creating 3 VMs, GATEWAY=10.0.0.1, and
 
-BASE_IP_NUM=2, their ip will be 10.0.0.2, 10.0.0.3 and 10.0.0.4
+BASE_IP_NUM=2, their ips will be 10.0.0.2, 10.0.0.3 and 10.0.0.4
 
     BRIDGE=xenbr0
     BASE_IP_NUM=2
