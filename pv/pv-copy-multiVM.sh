@@ -4,8 +4,11 @@
 # description: create several vm by copying source vm
 ###
 
+##  ssh not working, do not use this script 
+##  fixing bugs
 
-#!/bin/bash
+
+# #!/bin/bash
 set -euo pipefail
 
 source $1;
@@ -44,7 +47,7 @@ for i in `seq $START $STOP`; do
     sed -r "s/(file:.*)($PREFIX$ID)(.*)$/\1$PREFIX$i\3/" $cfg
 
     #3. copy image
-    rm -r $XEN_DOMAINS_DIR/$PREFIX$i #rm previous vm if exists
+    rm -r $XEN_DOMAINS_DIR/$PREFIX$i || true #rm previous vm if exists
     mkdir  $XEN_DOMAINS_DIR/$PREFIX$i
     cp -r $XEN_DOMAINS_DIR/$PREFIX$ID/$DISK_IMG $XEN_DOMAINS_DIR/$PREFIX$i/$DISK_IMG
 
